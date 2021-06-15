@@ -13,4 +13,15 @@ export class FlightsService {
   async findAll(): Promise<Flights[]> {
     return this.flightsRepository.find();
   }
+
+  async getFilteredFlights(orig: string, dest: string): Promise<any> {
+    return await this.flightsRepository.find({
+      origin: orig,
+      destination: dest,
+    });
+  }
+
+  async addFlight(flight: Flights): Promise<any> {
+    return await this.flightsRepository.save(flight);
+  }
 }
