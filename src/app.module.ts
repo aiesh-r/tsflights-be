@@ -13,7 +13,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       type: 'postgres',
       host: 'localhost',
       port: 5433,
-      username: '',
+      username: 'postgres',
       password: '123',
       database: 'transportation',
       entities: [Flights],
@@ -21,7 +21,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     }),
     FlightsModule,
   ],
-  controllers: [AppController, FlightsController],
-  providers: [AppService, FlightsService],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
