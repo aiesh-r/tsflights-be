@@ -11,6 +11,7 @@ export class FlightsService {
   ) {}
 
   async findAll(): Promise<Flights[]> {
+  console.log("Test cmmit-2");
     return this.flightsRepository.find();
   }
 
