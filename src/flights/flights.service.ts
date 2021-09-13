@@ -23,6 +23,7 @@ export class FlightsService {
   }
 
   async addFlight(flight: Flights): Promise<any> {
+     console.log("Test3");
     return await this.flightsRepository.save(flight);
     console.log("Test1");
   }
