@@ -16,9 +16,9 @@ export class FlightsService {
     return this.flightsRepository.find();
   }
 
-  async getFilteredFlights(orig: string, dest: string): Promise<any> {
+  async getFilteredFlights(ori: string, dest: string): Promise<any> {
     return await this.flightsRepository.find({
-      origin: orig,
+      origin: ori,
       destination: dest,
     });
   }
