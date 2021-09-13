@@ -11,7 +11,6 @@ export class FlightsService {
   ) {}
 
   async findAll(): Promise<Flights[]> {
-  console.log("Test cmmit-2");
     return this.flightsRepository.find();
   }
 
@@ -23,7 +22,6 @@ export class FlightsService {
   }
 
   async addFlight(flight: Flights): Promise<any> {
-     console.log("Test3");
     return await this.flightsRepository.save(flight);
     console.log("Test1");
   }
